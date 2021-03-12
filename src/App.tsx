@@ -9,8 +9,16 @@ function App() {
     console.log(res.data);
   };
 
+  const getRating = async () => {
+    const body = '604628d431318d0ed8c5ff14'
+    const res = await axios.post("http://localhost:5000/rating", {
+      id: '604628d431318d0ed8c5ff14'
+    })
+    console.log(res)
+  }
+
   useEffect(() => {
-    getCountries();
+    getRating();
   }, []);
   
   return (
